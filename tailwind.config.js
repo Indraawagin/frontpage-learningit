@@ -3,6 +3,7 @@ const colors = require("./tailwindcss/colors");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/parts/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [],
@@ -140,17 +141,13 @@ module.exports = {
     backgroundImage: {
       none: "none",
       "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
-      "gradient-to-tr":
-        "linear-gradient(to top right, var(--tw-gradient-stops))",
+      "gradient-to-tr": "linear-gradient(to top right, var(--tw-gradient-stops))",
       "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
-      "gradient-to-br":
-        "linear-gradient(to bottom right, var(--tw-gradient-stops))",
+      "gradient-to-br": "linear-gradient(to bottom right, var(--tw-gradient-stops))",
       "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-      "gradient-to-bl":
-        "linear-gradient(to bottom left, var(--tw-gradient-stops))",
+      "gradient-to-bl": "linear-gradient(to bottom left, var(--tw-gradient-stops))",
       "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
-      "gradient-to-tl":
-        "linear-gradient(to top left, var(--tw-gradient-stops))",
+      "gradient-to-tl": "linear-gradient(to top left, var(--tw-gradient-stops))",
     },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     backgroundPosition: {
@@ -362,14 +359,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Poppins"],
-      serif: [
-        "ui-serif",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
+      serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
       mono: [
         "ui-monospace",
         "SFMono-Regular",
@@ -865,8 +855,7 @@ module.exports = {
       all: "all",
       DEFAULT:
         "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
-      colors:
-        "color, background-color, border-color, text-decoration-color, fill, stroke",
+      colors: "color, background-color, border-color, text-decoration-color, fill, stroke",
       opacity: "opacity",
       shadow: "box-shadow",
       transform: "transform",

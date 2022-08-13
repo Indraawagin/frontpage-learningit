@@ -5,13 +5,13 @@ import { CSSTransition } from "react-transition-group";
 import formatThousand from "src/helpers/formatThousand";
 import courses from "src/constans/api/courses";
 
-import Header from "src/pages/parts/Header";
-import Footer from "src/pages/parts/Footer";
+import Header from "src/parts/Header";
+import Footer from "src/parts/Footer";
 
-import Feature from "src/pages/parts/Details/Feature";
-import CoursePhoto from "src/pages/parts/Details/CoursePhoto";
-import RenderPreview from "src/pages/parts/Details/RenderPreview";
-import ReviewStudent from "src/pages/parts/Details/ReviewStudent";
+import Feature from "src/parts/Details/Feature";
+import CoursePhoto from "src/parts/Details/CoursePhoto";
+import RenderPreview from "src/parts/Details/RenderPreview";
+import ReviewStudent from "src/parts/Details/ReviewStudent";
 
 // SVG
 import Nametag from "/public/images/icon-nametag.svg";

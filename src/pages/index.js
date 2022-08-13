@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Circle from "/public/images/circle-accent-1.svg";
-import Header from "src/pages/parts/Header";
-import Hero from "src/pages/parts/Hero";
-import Client from "src/pages/parts/Client";
-import ListCourses from "src/pages/parts/ListCourses";
-import ListCategories from "src/pages/parts/ListCategories";
-import Footer from "src/pages/parts/Footer";
+import Header from "src/parts/Header";
+import Hero from "src/parts/Hero";
+import Client from "src/parts/Client";
+import ListCourses from "src/parts/ListCourses";
+import ListCategories from "src/parts/ListCategories";
+import Footer from "src/parts/Footer";
 
 import courses from "/src/constans/api/courses";
 

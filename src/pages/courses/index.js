@@ -3,9 +3,9 @@ import Head from "next/head";
 import courses from "src/constans/api/courses";
 import Link from "next/link";
 
-import Header from "src/pages/parts/Header";
-import ListCourses from "src/pages/parts/ListCourses";
-import Footer from "src/pages/parts/Footer";
+import Header from "src/parts/Header";
+import ListCourses from "src/parts/ListCourses";
+import Footer from "src/parts/Footer";
 
 export default function Courses({ data }) {
   const [Search, setSearch] = useState(() => "");

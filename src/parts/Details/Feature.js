@@ -9,9 +9,7 @@ export default function Feature({ data }) {
         <div className="ml-5">
           <span className="text-gray-600 block">{data.name}</span>
           <span className="text-gray-900 text-3xl">
-            {typeof data.value === "number"
-              ? formatThousand(data.value)
-              : data.value}
+            {typeof data.value === "number" ? formatThousand(data.value) : data.value}
           </span>
         </div>
       </div>
