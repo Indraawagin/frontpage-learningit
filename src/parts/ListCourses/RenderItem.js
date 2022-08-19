@@ -4,9 +4,9 @@ import IconPlay from "public/images/icon-play.svg";
 
 export default function RenderItem({ item }) {
   return (
-    <div className="w-1/4 px-4">
+    <div className="w-full md:w-1/4 px-4 mb-6">
       <div className="item relative">
-        <figure className="item-image h-44 w-64">
+        <figure className="item-image md:h-44 md:w-64">
           <IconPlay></IconPlay>
           <img
             src={item?.thumbnail ?? ""}
@@ -14,13 +14,9 @@ export default function RenderItem({ item }) {
             className="w-full h-full object-fill"
           />
         </figure>
-        <div className="item-meta">
-          <h4 className="text-lg text-gray-900 h-16">
-            {item?.name ?? "Course name"}
-          </h4>
-          <h5 className="text-sm text-gray-600">
-            {item?.level ?? "Course level"}
-          </h5>
+        <div className="item-meta mt-2 md:mt-0">
+          <h4 className="text-lg text-gray-900 md:h-16">{item?.name ?? "Course name"}</h4>
+          <h5 className="text-sm text-gray-600">{item?.level ?? "Course level"}</h5>
         </div>
         <Link href="/courses/[id]" as={`/courses/${item.id}`}>
           <a className="link-wrapped"></a>

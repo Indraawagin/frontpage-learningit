@@ -5,9 +5,9 @@ export default function Footer() {
   function submit() {}
 
   return (
-    <footer className="container mx-auto">
-      <div className="flex justify-between">
-        <div className="w-1/6">
+    <footer className="container px-4 mx-auto">
+      <div className="flex flex-wrap justify-between">
+        <div className="w-full md:w-1/6 mb-8 md:mb-0">
           <h6 className="text-white">Company</h6>
           <ul className="mt-4">
             <List textName="API Developer"></List>
@@ -16,7 +16,7 @@ export default function Footer() {
             <List textName="New Soon"></List>
           </ul>
         </div>
-        <div className="w-1/6">
+        <div className="w-full md:w-1/6 mb-8 md:mb-0">
           <h6 className="text-white">Student</h6>
           <ul className="mt-4">
             <List textName="Get Scholarship"></List>
@@ -25,7 +25,7 @@ export default function Footer() {
             <List textName="Refund Policy"></List>
           </ul>
         </div>
-        <div className="w-1/6">
+        <div className="w-full md:w-1/6 mb-8 md:mb-0">
           <h6 className="text-white">Touch Us</h6>
           <p className="mt-4 text-indigo-600 leading-loose">
             LearningIt Centre <br />
@@ -34,20 +34,20 @@ export default function Footer() {
             +21 2020 5555
           </p>
         </div>
-        <div className="w-2/6">
+        <div className="w-full md:w-2/6 mb-8 md:mb-0">
           <h6 className="text-white">Promotions</h6>
           <p className="mt-4 text-indigo-600 leading-loose">Submit your email for new updates</p>
           <form onSubmit={submit}>
             <input
               type="email"
-              className="bg-white focus:outline-none border-0  px-6 py-3 w-1/2"
+              className="bg-white focus:outline-none border-0 px-6 py-3 md:w-1/2"
               placeholder="Your email address"
             />
             <button
               className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none
-            shadow-inner text-white px-6 py-3 mt-5"
+            shadow-inner text-white md:px-6 px-4 py-3 mt-5"
             >
-              Submit
+              Daftar Now
             </button>
           </form>
         </div>

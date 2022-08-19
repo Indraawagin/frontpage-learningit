@@ -16,21 +16,21 @@ function Home({ data }) {
         <title>Learning It</title>
       </Head>
       <main>
-        <section className="header-clipping pt-10">
-          <Circle className="absolute left-0 bottom-0 overflow-hidden"></Circle>
-          <div className="sunshine"></div>
-          <div className="container mx-auto">
+        <section className="header-clipping pt-10 min-h-screen md:min-h-0">
+          <div className="sunshine max-w-full"></div>
+          <Circle className="absolute md:left-0 md:bottom-0 md:overflow-hidden hidden md:block"></Circle>
+          <div className="container px-4 mx-auto">
             <Header></Header>
             <Hero></Hero>
           </div>
         </section>
-        <section className="container mx-auto pt-24">
+        <section className="container px-4 mx-auto md:pt-24">
           <Client></Client>
         </section>
-        <section className="container mx-auto pt-24">
+        <section className="container px-4 mx-auto md:pt-24">
           <ListCourses data={data}></ListCourses>
         </section>
-        <section className="container mx-auto pt-24">
+        <section className="container px-4 mx-auto md:pt-24">
           <ListCategories></ListCategories>
         </section>
         <section className="mt-24 pt-12 pb-5 bg-blue-900">

@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Header({ onLight }) {
   const [User, setUser] = useState(() => null);
+  const [ToggleMenu, setToggleMenu] = useState(() => false);
   useEffect(() => {
     const userCookies =
       decodeURIComponent(window.document.cookie)
@@ -24,12 +25,28 @@ export default function Header({ onLight }) {
   const textCTA = router.pathname.indexOf("/login") > -1 ? "Daftar" : "Masuk";
 
   return (
-    <header className="flex justify-between items-center">
-      <div style={{ height: 54 }}>
+    <header
+      className={[
+        "flex justify-between items-center",
+        ToggleMenu ? "fixed w-full -mx-4 px-4" : "",
+      ].join(" ")}
+    >
+      <div className="z-50 md:h-[54px]">
         <Logo className="on-dark"></Logo>
       </div>
-      <ul className="flex items-center">
-        <li>
+      <div className="flex md:hidden">
+        <button
+          className={["toggle z-50", ToggleMenu ? "active" : ""].join(" ")}
+          onClick={() => setToggleMenu((prev) => !prev)}
+        ></button>
+      </div>
+      <ul
+        className={[
+          "transition-all duration-200 items-center fixed inset-0 bg-blue-900 pt-24 md:pt-0 md:bg-transparent md:relative md:flex md:opacity-100 md:visible",
+          ToggleMenu ? "opacity-100 visible z-20" : "opacity-0 invisible",
+        ].join(" ")}
+      >
+        <li className="mt-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -41,7 +58,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="mt-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -53,7 +70,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="mt-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -65,7 +82,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="mt-4 md:my-0">
           <Link href="/">
             <a
               className={[
@@ -77,7 +94,7 @@ export default function Header({ onLight }) {
             </a>
           </Link>
         </li>
-        <li>
+        <li className="my-8 md:my-0">
           {User ? (
             <a
               target="_blank"

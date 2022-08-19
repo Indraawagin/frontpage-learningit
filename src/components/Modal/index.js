@@ -22,12 +22,7 @@ export default function Modal(props) {
   };
 
   const handleClickOutside = (event) => {
-    if (
-      ModalRef?.current &&
-      !ModalRef?.current?.contains?.(event.target) &&
-      Allow
-    )
-      toggle();
+    if (ModalRef?.current && !ModalRef?.current?.contains?.(event.target) && Allow) toggle();
   };
 
   useEffect(() => {
@@ -79,7 +74,7 @@ export default function Modal(props) {
                   <div
                     style={props.modalStyle}
                     ref={ModalRef}
-                    className="bg-white shadow-2xl max-w-3xl max-h-2xl"
+                    className="bg-white shadow-2xl w-full max-h-full md:w-auto md:max-w-3xl "
                   >
                     <div className="relative">
                       <span className="modal-close" onClick={toggle}></span>

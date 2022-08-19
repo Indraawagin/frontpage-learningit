@@ -14,13 +14,11 @@ export default function ListCourses({ data }) {
         </div>
         <div className="w-auto">
           <Link href="/courses">
-            <a className="text-gray-600 hover:underline text-sm">
-              View All Course
-            </a>
+            <a className="text-gray-600 hover:underline text-sm">View All Course</a>
           </Link>
         </div>
       </div>
-      <div className="flex justify-start items-center -mx-4 mt-6">
+      <div className="flex flex-wrap justify-start items-center -mx-4 mt-6">
         {data?.length > 0 ? (
           data?.map((item, i) => {
             return <RenderItem item={item} key={i}></RenderItem>;

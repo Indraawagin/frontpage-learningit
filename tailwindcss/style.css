@@ -4,6 +4,45 @@
 @tailwind utilities;
 
 @layer components {
+  .toggle {
+    @apply relative w-5 h-5;
+    z-index: 999;
+  }
+
+  .toggle:focus {
+    @apply outline-none;
+  }
+
+  .toggle::before,
+  .toggle::after {
+    @apply right-0 absolute origin-center bg-gray-200 transition-all duration-200;
+    content: "";
+    height: 3px;
+  }
+
+  .toggle::before {
+    @apply w-5;
+    top: 26%;
+  }
+
+  .toggle::after {
+    @apply w-3;
+    top: 58%;
+  }
+
+  .toggle.active::before,
+  .toggle.active::after {
+    @apply w-5 top-1/2;
+  }
+
+  .toggle.active::before {
+    @apply -translate-y-1/2 -rotate-45;
+  }
+
+  .toggle.active::after {
+    @apply -translate-y-1/2 rotate-45;
+  }
+
   .modal-close {
     @apply absolute right-0 cursor-pointer inline-block;
     width: 30px;
@@ -106,11 +145,10 @@
     left: 50%;
     transform: translateX(-50%);
     width: 515px;
-    height: 90%;
+    height: 60%;
     opacity: 0.8;
     clip-path: polygon(46% 0%, 82% 0%, 67% 100%, 0% 100%);
-    background: transparent
-      linear-gradient(130.09deg, #3d47bd 17.72%, #2e37a4 50.8%);
+    background: transparent linear-gradient(130.09deg, #3d47bd 17.72%, #2e37a4 50.8%);
   }
 
   .header-clipping:before {

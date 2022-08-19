@@ -73,7 +73,9 @@ export default function Courses({ data }) {
             style={{ marginBottom: "-25px" }}
           >
             <div className="">
-              <h3 className="text-6xl text-center text-teal-400 font-semibold">Library</h3>
+              <h3 className="md:text-6xl text-5xl text-center text-teal-400 font-semibold">
+                Library
+              </h3>
               <h4 className="text-lg text-center text-white">
                 Jangan mau kalah update dengan lainnya <br /> Yuk ikuti perkembangan teknologi.
               </h4>
@@ -138,11 +140,11 @@ export default function Courses({ data }) {
           </div>
         </div>
 
-        <div className="container mx-auto z-10 relative">
+        <div className="container md:px-0 px-4 mx-auto z-10 relative">
           <Header></Header>
         </div>
       </section>
-      <section className="container mx-auto pt-24">
+      <section className="container md:px-0 px-4 mx-auto pt-24">
         <ListCourses data={data}></ListCourses>
       </section>
       <section className="mt-24 pt-12 pb-5 bg-blue-900">

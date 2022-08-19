@@ -7,32 +7,32 @@ export default function Hero() {
   };
   return (
     <div className="flex justify-between items-center">
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2 mt-8 md:mt-0">
         <h1 className="text-5xl text-white mb-5">
           <span className="text-teal-400 font-semibold">The New </span>
-          Way to <br /> Achieve Good
+          Way to <br className="hidden md:block" /> Achieve Good
           <span className="text-teal-400 font-semibold"> Skills</span>
         </h1>
         <p className="text-white font-light text-lg mb-8">
           We provide tons of pathskill that you <br /> can choose and focus on
         </p>
-        <form onSubmit={submit}>
+        <form onSubmit={submit} className="flex">
           <input
             onChange={(event) => setState(event.target.value)}
             value={state}
             type="email"
-            className="bg-white focus:outline-none border-0 px-6 py-3 w-1/2"
+            className="bg-white focus:outline-none border-0 px-4 md:px-6 py-3 w-full md:w-1/2"
             placeholder="Your email addres"
           />
           <button
             className="bg-orange-500 hover:bg-orange-400 transition-all duration-200 focus:outline-none shadow-inner 
-          text-white px-6 py-3"
+          text-white px-4 md:px-6 py-3 whitespace-nowrap"
           >
             Daftar Now
           </button>
         </form>
       </div>
-      <div className="w-1/2 flex justify-end pt-24 pr-16">
+      <div className="hidden w-1/2 md:flex justify-end pt-24 pr-16">
         <div className="relative" style={{ width: 369, height: 440 }}>
           <div
             className="absolute border-indigo-700 border-2 -mt-3 -mr-6 right-0"

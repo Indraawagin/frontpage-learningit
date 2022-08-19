@@ -25,9 +25,7 @@ export default function RenderPreview({ previews }) {
                         key={`${index2}-${child.id}`}
                         className="relative hover:bg-gray-200 flex justify-between item-center pl-8 pr-4 py-2"
                       >
-                        <span className="text-gray-600">
-                          {child?.name ?? "Course name"}
-                        </span>
+                        <span className="text-gray-600">{child?.name ?? "Course name"}</span>
                         {index2 === 0 && (
                           <Modal
                             content={(toggle) => (
@@ -39,24 +37,16 @@ export default function RenderPreview({ previews }) {
                                     autoplay: 1,
                                     controls: 1,
                                   },
+                                  width: "100%",
                                 }}
                               ></Youtube>
                             )}
                           >
-                            {(toggle) => (
-                              <span
-                                onClick={toggle}
-                                className="link-wrapped"
-                              ></span>
-                            )}
+                            {(toggle) => <span onClick={toggle} className="link-wrapped"></span>}
                           </Modal>
                         )}
                         {index2 === 0 && (
-                          <IconPlay
-                            className="fill-teal-400"
-                            width={20}
-                            height={20}
-                          ></IconPlay>
+                          <IconPlay className="fill-teal-400" width={20} height={20}></IconPlay>
                         )}
 
                         {index2 !== 0 && <IconLock></IconLock>}
